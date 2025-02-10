@@ -159,7 +159,7 @@ p {
 }
 
 table {
-    width: 50%;
+    width: 90%;
     margin: 10px auto;
     border-collapse: collapse;
     text-align: center;
@@ -231,4 +231,27 @@ button:hover {
 
 .video-watermark a:hover {
     text-decoration: underline;
+}
+
+/* Media Queries for Mobile View */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    table {
+        width: 100%;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav a {
+        font-size: 0.9em;
+    }
 }
