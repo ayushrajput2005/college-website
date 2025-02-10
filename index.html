@@ -9,8 +9,8 @@
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: yellow;
-            color: black;
+            background-color: rgb(255, 234, 0);
+            color: rgb(255, 255, 255);
             overflow-x: hidden;
             cursor: none;
         }
@@ -24,6 +24,7 @@
             height: 100vh;
             object-fit: cover;
             z-index: -1;
+            animation: slice-in 5s ease-out forwards;
         }
 
         /* Hollow Yellow Circle Cursor */
@@ -31,7 +32,7 @@
             position: fixed;
             width: 20px;
             height: 20px;
-            border: 2px solid yellow;
+            border: 2px solid rgb(255, 230, 0);
             border-radius: 50%;
             pointer-events: none;
             transform: translate(-50%, -50%);
@@ -51,7 +52,7 @@
             top: 10px;
             left: 50%;
             transform: translateX(-50%);
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(75, 75, 75, 0.991);
             border-radius: 25px;
             padding: 10px 20px;
             display: flex;
@@ -70,7 +71,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.0em;
             position: relative;
             transition: transform 0.3s, color 0.3s;
         }
@@ -83,15 +84,15 @@
             bottom: -5px;
             width: 100%;
             height: 2px;
-            background-color: yellow;
+            background-color: rgb(255, 225, 0);
             transform: scaleX(0);
-            transform-origin: right;
+            transform-origin: center;
             transition: transform 0.3s ease-out;
         }
 
         .nav a:hover::after {
             transform: scaleX(1);
-            transform-origin: left;
+            transform-origin: center;
         }
 
         .nav a:hover {
@@ -110,7 +111,7 @@
             box-sizing: border-box;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            transition: opacity 0.8s ease-out, transform 1s ease-out;
             position: relative;
             z-index: 1;
         }
@@ -136,15 +137,15 @@
             bottom: -5px;
             width: 100%;
             height: 2px;
-            background-color: yellow;
+            background-color: rgb(255, 230, 0);
             transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease-out;
+            transform-origin: center;
+            transition: transform 0.5s ease-out;
         }
 
         h1:hover::after {
             transform: scaleX(1);
-            transform-origin: left;
+            transform-origin: center;
         }
 
         p {
@@ -171,6 +172,33 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #333;
         }
+
+
+        table {
+        width: 80%;
+        margin: 20px auto;
+        border-collapse: collapse;
+        text-align: center;
+        background-color: #333;
+        color: white;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+    th, td {
+        padding: 12px;
+        border: 1px solid #555;
+    }
+    th {
+        background-color: #444;
+        font-weight: bold;
+    }
+    tr:nth-child(even) {
+        background-color: #555;
+    }
+    h2 {
+        text-align: center;
+        margin-top: 30px;
+    }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -197,17 +225,77 @@
     <section id="home">
         <h1>SMT Kashibai Navale College of Engineering</h1>
         <h2 style="font-size: 1.5em; margin-top: 10px;">Vadgaon / Vadgaon Budruk</h2>
-        <p style="margin-top: 20px; font-style: italic;">Producing not only clever engineers but also good humans.</p>
+        <p style="margin-top: 20px; font-style: italic;text-decoration: underline;">"Producing not only clever engineers but also good humans."</p>
     </section>
 
     <section id="about">
         <h1>Vision</h1>
-        <p>To be a leading institution in engineering education, fostering innovation, research, and ethical values.</p>
+        <h4 style="font-size: 1.0em; margin-top: 10px;text-decoration: underline;font-style: italic;">उत्तमपुरुषान् उत्तमाभियंतृन् निमार्तुं कठिनद्वाः</h4>
+        <p style="font-size: 90; font-weight: bold;;">OUR MISSION is to do WHAT it takes to foster, sustain and upgrade the quality of Education by way of harnessing Talent, Potential and optimizing meaningful Learning Facilities. OUR ENDEAVOR is to provide the Best Learning, conductive environment and the students with effective Learning Strategies.</p>
     </section>
 
     <section id="courses">
         <h1>Our Courses</h1>
         <p>Explore the wide range of courses we offer.</p>
+    <h2>Undergraduate Engineering Program</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Seats</th>
+        </tr>
+        <tr>
+            <td>Computer Engineering</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>Electronics and Telecommunication Engineering</td>
+            <td>300</td>
+        </tr>
+        <tr>
+            <td>Information Technology</td>
+            <td>120</td>
+        </tr>
+        <tr>
+            <td>Mechanical Engineering</td>
+            <td>330</td>
+        </tr>
+    </table>
+    
+    <h2>Postgraduate Engineering Program</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Seats</th>
+        </tr>
+        <tr>
+            <td>Master of Engineering in Computer</td>
+            <td>18</td>
+        </tr>
+    </table>
+    
+    <h2>Postgraduate Management Program</h2>
+    <table>
+        <tr>
+            <th>Course</th>
+            <th>Seats</th>
+        </tr>
+        <tr>
+            <td>Master’s in Business Administration (MBA)</td>
+            <td>60</td>
+        </tr>
+    </table>
+    
+    <h2>Doctoral Program</h2>
+    <table>
+        <tr>
+            <th>Research Center</th>
+            <th>Registered Students</th>
+        </tr>
+        <tr>
+            <td>Computer Engineering Research Center</td>
+            <td>Exact count unclear</td>
+        </tr>
+    </table>
     </section>
 
     <section id="admission">
