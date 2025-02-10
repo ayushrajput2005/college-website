@@ -41,9 +41,9 @@ This is a mini project to redesign a college website. The goal was to create a s
 
 ## Screenshots
 
-![Home Section](Screenshots\home.png)
-![Courses Section](Screenshots\courses.png)
-![Screen Recording ](video\Screenrecording.mp4)
+![Home Section](Screenshots/home.png)
+![Courses Section](Screenshots/courses.png)
+![Screen Recording ](video/Screenrecording.mp4)
 
 ## Acknowledgements
 
