@@ -233,6 +233,121 @@ button:hover {
     text-decoration: underline;
 }
 
+/* Gallery Section */
+.gallery-container {
+    overflow: hidden; /* Hide scrollbars */
+    position: relative;
+    width: 100vw; /* Full width of the screen */
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between rows */
+}
+
+.gallery {
+    display: flex;
+    gap: 10px;
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.gallery-row-1 {
+    animation: scroll-infinite 20s linear infinite; /* Forward scrolling */
+}
+
+.gallery-row-2 {
+    animation: scroll-infinite-reverse 20s linear infinite; /* Reverse scrolling */
+}
+
+.gallery img {
+    width: auto;
+    height: 200px; /* Maintain consistent height */
+    object-fit: cover; /* Ensure images fill the frame without stretching */
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Endless scrolling animation */
+@keyframes scroll-infinite {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-infinite-reverse {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Hide scrollbars */
+.gallery-container::-webkit-scrollbar {
+    display: none; /* For WebKit browsers */
+}
+
+.gallery-container {
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    scrollbar-width: none; /* For Firefox */
+}
+
+/* Credits Section */
+#credits {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: transparent; /* Removed black tint */
+    color: white;
+}
+
+#credits h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(255, 230, 0);
+}
+
+#credits p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: 300;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.credits-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.credits-buttons .button {
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background-color: rgba(75, 75, 75, 0.991);
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.credits-buttons .button:hover {
+    transform: scale(1.1);
+    background-color: rgb(255, 230, 0);
+}
+
 /* Media Queries for Mobile View */
 @media (max-width: 768px) {
     h1 {
